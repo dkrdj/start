@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>글수정</title>
+    <%@ include
+    file="../../../../../../OneDrive/바탕 화면/workspace/Debug_서울_7_이상현/src/main/webapp/WEB-INF/views/common/bootstrap.jsp"
+    %>
+</head>
+<body>
+<div class="container">
+    <h2>글 수정</h2>
+    <form action="update" method="POST">
+        <div>
+            <label class="form-label" for="vin">차대번호</label>
+            <input class="form-control" id="vin" readonly th:field="${car.vin }" type="text">
+        </div>
+        <div>
+            <label class="form-label" for="modelName">모델명</label>
+            <input class="form-control" id="modelName" readonly th:field="${car.modelName }" type="text">
+        </div>
+        <div>
+            <label class="form-label" for="yearOfManufacture">출시연도</label>
+            <input class="form-control" id="yearOfManufacture" readonly
+                   th:field="${car.yearOfManufacture }" type="text">
+        </div>
+        <div>
+            <label class="form-label" for="mileage">주행거리</label>
+            <input class="form-control" id="mileage" readonly th:field="${car.mileage }" type="text">
+        </div>
+        <div>
+            <label class="form-label" for="price">가격</label>
+            <input class="form-control" id="price" th:field="${car.price }" type="text">
+        </div>
+        <div>
+            <label class="form-label" for="manufacturerCode">제조사</label>
+            <input class="form-control" id="manufacturerCode" readonly
+                   th:field="${car.manufacturerCode }" type="text">
+        </div>
+        <button class="btn btn-primary">수정</button>
+    </form>
+</div>
+</body>
+</html>

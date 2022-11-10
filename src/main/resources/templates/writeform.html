@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>글작성</title>
+</head>
+<body>
+<div class="container">
+    <h2>글 작성</h2>
+    <form action="write" method="POST">
+        <div class="mb-3">
+            <label class="form-label" for="vin">차대번호</label>
+            <input class="form-control" id="vin" name="vin" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="modelName">모델명</label>
+            <input class="form-control" id="modelName" name="modelName" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="yearOfManufacture">출시연도</label>
+            <input class="form-control" id="yearOfManufacture" name="yearOfManufacture" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="mileage">주행거리</label>
+            <input class="form-control" id="mileage" name="mileage" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="price">가격</label>
+            <input class="form-control" id="price" name="price" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="manufacturerCode">제조사</label>
+            <select id="manufacturerCode" name="manufacturerCode">
+                <option value="100">현대자동차</option>
+                <option value="200">기아자동차</option>
+                <option value="300">쉐보레</option>
+                <option value="400">포드</option>
+            </select>
+        </div>
+        <button class="btn btn-primary">등록</button>
+    </form>
+</div>
+</body>
+</html>

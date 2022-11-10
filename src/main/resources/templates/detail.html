@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>글상세보기</title>
+</head>
+<body>
+<div class="container">
+    <h2>상세보기</h2>
+    <hr>
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <div>차대번호 : <span th:text="${car.vin }">vin</span></div>
+                <div>모델명 : <span th:text="${car.modelName }">modelName</span></div>
+                <div>출시연도 : <span th:text="${car.yearOfManufacture }">yearOfManufacture</span></div>
+                <div>가격 : <span th:text="${car.price }">price</span>만원</div>
+                <div>주행거리 : <span th:text="${car.mileage }">mileage</span></div>
+                <div>제조사 : <span th:text="${car.manufacturer }">manufacturer</span></div>
+                <div>조회수 : <span th:text="${car.viewCnt }">viewCnt</span></div>
+            </div>
+            <div>
+                <a class="btn btn-success" th:href="@{/update(vin=${car.vin})}">수정</a>
+                <form action="delete" method="POST">
+                    <input name="vin" type="hidden" value="${car.vin }">
+                    <input type="submit" value="삭제">
+
+                </form>
+                <a class="btn btn-warning" href="list">목록</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 목록</title>
+</head>
+<body>
+<div class="container">
+    <h2>게시글 목록</h2>
+    <hr>
+    <div>
+        <table class="table text-center">
+            <tr>
+                <th>차대번호</th>
+                <th>모델명</th>
+                <th>출시연도</th>
+                <th>조회수</th>
+                <th>제조사</th>
+            </tr>
+
+            <tr th:each="car : ${list}">
+                <td><a th:href="@{/detail(vin =${car.vin })}" th:text="${car.vin }"></a></td>
+                <td th:text="${car.modelName }">car.modelName</td>
+                <td th:text="${car.yearOfManufacture }">car.yearOfManufacture</td>
+                <td th:text="${car.viewCnt }">car.viewCnt</td>
+                <td th:text="${car.manufacturer }">manufacturer</td>
+            </tr>
+        </table>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-outline-primary" href="/write">중고차 등록</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
